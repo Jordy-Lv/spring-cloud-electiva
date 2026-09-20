@@ -22,3 +22,12 @@ Requisitos: Java 21 y Maven.
    cd config-client
    mvn spring-boot:run
    ```
+
+Para probar otro perfil (`dev`, `uat` o `default`):
+```
+mvn spring-boot:run "-Dspring-boot.run.arguments=--spring.profiles.active=uat"
+```
+
+Luego abrir `http://localhost:8082/mensaje` (puerto 8080 para `default`, 8081 para `dev`, 8082 para `uat`).
+
+Más detalle en [INFORME.md](INFORME.md).
